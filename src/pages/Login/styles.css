@@ -1,0 +1,3 @@
+.Button:hover { /* Aumenta a especificidade */
+  color: #8257E5;
+}
