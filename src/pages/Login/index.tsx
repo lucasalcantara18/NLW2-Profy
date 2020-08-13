@@ -4,14 +4,21 @@ import './styles.css';
 import { Grid, Button } from '@material-ui/core';
 import classNames from 'classnames';
 import { FaGraduationCap, FaChalkboardTeacher } from 'react-icons/fa';
+import { useHistory } from 'react-router-dom';
 import useStyles from './styles';
 import profy from '../../assets/Proffy.svg';
 import ilustra from '../../assets/Ilustra.svg';
+import hearth from '../../assets/Vector.svg';
 import useWindowDimensions from '../../utils/windowsDimension';
 
 const LoginPage = () => {
+  const history = useHistory();
   const classes = useStyles();
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
+
+  const handleClickProfy = () => {
+    history.push('/profy');
+  };
 
   return (
     <div className={classes.root}>
@@ -34,7 +41,7 @@ const LoginPage = () => {
           className={classNames(classes.flexGrid, classes.divProfySpace)}
         >
           <div className={classes.divProfySpace}>
-            <img src={profy} alt="logo" />
+            <img src={profy} width={width < 960 ? 350 : 500} alt="logo" />
             <p className={classes.textUnderProfy}>
               Sua Plataforma de <br /> estudos online.
             </p>
@@ -84,22 +91,23 @@ const LoginPage = () => {
           <div className={classes.textMine}>
             <p>
               Total de 285 conexões <br /> já realizadas
+              <img src={hearth} alt="" className={classes.imgHearth} />
             </p>
           </div>
         </Grid>
         <Grid
           alignContent="center"
           alignItems="center"
-          justify={width < 960 ? 'center' : 'flex-start'}
+          justify={width < 960 ? 'center' : 'flex-end'}
           item
           xs={12}
           sm={12}
-          md={6}
-          lg={6}
-          xl={6}
+          md={3}
+          lg={3}
+          xl={3}
           className={classNames(classes.flexGrid, classes.gridSecond)}
         >
-          <div className={classes.gridFirstButton}>
+          <div>
             <Button
               variant="contained"
               color="primary"
@@ -111,7 +119,20 @@ const LoginPage = () => {
               Estudar
             </Button>
           </div>
-          <div className={classes.gridSecondButton}>
+        </Grid>
+        <Grid
+          alignContent="center"
+          alignItems="center"
+          justify={width < 960 ? 'center' : 'flex-start'}
+          item
+          xs={12}
+          sm={12}
+          md={3}
+          lg={3}
+          xl={3}
+          className={classNames(classes.flexGrid, classes.gridSecond)}
+        >
+          <div>
             <Button
               variant="contained"
               color="secondary"
@@ -122,6 +143,7 @@ const LoginPage = () => {
                   className={classes.iconPadding}
                 />
               }
+              onClick={handleClickProfy}
             >
               Dar Aulas
             </Button>

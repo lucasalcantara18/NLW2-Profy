@@ -50,8 +50,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     fontSize: 12,
     marginTop: '0',
     color: '#6A6180',
-    lineHeight: '10px',
+    lineHeight: '13px',
     paddingLeft: '50px',
+    textAlign: 'right',
+  },
+  imgHearth: {
+    paddingLeft: '5px',
   },
   firstButton: {
     fontFamily: 'Poppins',
