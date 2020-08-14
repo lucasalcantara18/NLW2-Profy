@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '100vh',
     width: '100%',
     flexGrow: 1,
+    overflowX: 'hidden',
     background: '#E5E5E5',
   },
   menuButton: {
@@ -66,6 +67,48 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   rootGridBotton: {
     background: '#8257E5',
+    paddingBottom: '100px',
+  },
+  paperRoot: {
+    width: '68%',
+    background: '#FFFFFF',
+    border: '1px solid #E6E6F0',
+    boxSizing: 'border-box',
+    borderRadius: '8px',
+    position: 'absolute',
+    top: '-50px',
+    left: '15%',
+  },
+  paperGrid: {
+    position: 'relative',
+  },
+  paperTitle: {
+    display: 'flex',
+    paddingTop: '42px',
+    paddingLeft: '64px',
+    paddingRight: '64px',
+  },
+  paperDivider: {
+    display: 'block',
+    paddingLeft: '64px',
+    paddingRight: '64px',
+  },
+  paperForm: {
+    display: 'flex',
+    paddingLeft: '64px',
+    paddingRight: '64px',
+  },
+  titleForm: {
+    fontFamily: 'Archivo',
+    fontStyle: 'normal',
+    fontWeight: 600,
+    fontSize: '24px',
+    lineHeight: '34px',
+    color: '#32264D',
+  },
+  textfield: {
+    marginTop: '40px',
+    background: '#FAFAFC',
   },
 }));
 

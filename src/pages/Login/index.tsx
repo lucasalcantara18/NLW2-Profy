@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import { Grid, Button } from '@material-ui/core';
 import classNames from 'classnames';
@@ -15,6 +15,7 @@ const LoginPage = () => {
   const history = useHistory();
   const classes = useStyles();
   const { width } = useWindowDimensions();
+  const [item, setItem] = useState<boolean>(true);
 
   const handleClickProfy = () => {
     history.push('/profy');
@@ -24,15 +25,12 @@ const LoginPage = () => {
     <div className={classes.root}>
       {/* width: {width} ~ height: {height} */}
       <Grid
-        container
+        container={item}
         className={classNames(classes.rootGridTop, classes.espGridTop)}
-        xs={12}
-        xl={12}
       >
         <Grid
           justify={width < 960 ? 'center' : 'flex-end'}
-          alignItems="center"
-          item
+          item={item}
           xs={12}
           sm={12}
           md={6}
@@ -50,7 +48,7 @@ const LoginPage = () => {
         <Grid
           justify={width < 960 ? 'center' : 'flex-start'}
           alignItems="center"
-          item
+          item={item}
           xs={12}
           sm={12}
           md={6}
@@ -67,16 +65,14 @@ const LoginPage = () => {
         </Grid>
       </Grid>
       <Grid
-        container
+        container={item}
         className={classNames(classes.rootGridBotton, classes.containerFooter)}
-        xs={12}
-        xl={12}
       >
         <Grid
           alignContent="center"
           alignItems="center"
           justify={width < 960 ? 'center' : 'flex-end'}
-          item
+          item={item}
           xs={12}
           sm={12}
           md={6}
@@ -99,7 +95,7 @@ const LoginPage = () => {
           alignContent="center"
           alignItems="center"
           justify={width < 960 ? 'center' : 'flex-end'}
-          item
+          item={item}
           xs={12}
           sm={12}
           md={3}
@@ -124,7 +120,7 @@ const LoginPage = () => {
           alignContent="center"
           alignItems="center"
           justify={width < 960 ? 'center' : 'flex-start'}
-          item
+          item={item}
           xs={12}
           sm={12}
           md={3}

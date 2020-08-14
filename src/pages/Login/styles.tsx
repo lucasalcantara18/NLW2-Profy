@@ -19,6 +19,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   divProfySpace: {
     paddingRight: '15px',
+    alignItems: 'center',
   },
   divIlustraSpace: {
     paddingLeft: '15px',
