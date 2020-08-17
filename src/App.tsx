@@ -1,12 +1,15 @@
 import React from 'react';
 
 import './App.css';
+import { RecoilRoot } from 'recoil';
 import Routes from './routes';
 
 function App() {
   return (
     <div>
-      <Routes />
+      <RecoilRoot>
+        <Routes />
+      </RecoilRoot>
     </div>
   );
 }

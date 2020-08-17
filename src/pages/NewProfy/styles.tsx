@@ -5,8 +5,8 @@ const useStyles = makeStyles((theme: Theme) => ({
     height: '100vh',
     width: '100%',
     flexGrow: 1,
-    overflowX: 'hidden',
     background: '#E5E5E5',
+    overflowX: 'hidden',
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -73,6 +73,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '68%',
     background: '#FFFFFF',
     border: '1px solid #E6E6F0',
+    marginBottom: '150px',
     boxSizing: 'border-box',
     borderRadius: '8px',
     position: 'absolute',
@@ -82,21 +83,53 @@ const useStyles = makeStyles((theme: Theme) => ({
   paperGrid: {
     position: 'relative',
   },
+  paperFGrid: {
+    paddingLeft: '64px',
+    paddingRight: '64px',
+  },
+  inputBetweenLeft: {
+    paddingLeft: '15px',
+  },
+  inputBetweenRight: {
+    paddingRight: '15px',
+  },
   paperTitle: {
     display: 'flex',
     paddingTop: '42px',
-    paddingLeft: '64px',
-    paddingRight: '64px',
   },
   paperDivider: {
     display: 'block',
-    paddingLeft: '64px',
-    paddingRight: '64px',
+  },
+  paperDividerFooter: {
+    display: 'block',
+    paddingBottom: '40px',
   },
   paperForm: {
     display: 'flex',
-    paddingLeft: '64px',
-    paddingRight: '64px',
+  },
+  gridFlex: {
+    display: 'flex',
+  },
+  paperFooter: {
+    background: '#FAFAFC',
+    marginTop: '64px',
+    borderRadius: '8px',
+    paddingBottom: '40px',
+  },
+  divFooter: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  imgFooter: {
+    paddingRight: '6px',
+  },
+  textFooter: {
+    fontFamily: 'Poppins',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontSize: '12px',
+    lineHeight: '20px',
+    color: '#A0A0B3',
   },
   titleForm: {
     fontFamily: 'Archivo',
@@ -106,9 +139,47 @@ const useStyles = makeStyles((theme: Theme) => ({
     lineHeight: '34px',
     color: '#32264D',
   },
+  newH: {
+    fontFamily: 'Archivo',
+    fontStyle: 'normal',
+    fontWeight: 600,
+    fontSize: '16px',
+    lineHeight: '26px',
+    color: '#8257E5',
+    paddingTop: '5px',
+  },
+  a: {
+    textDecoration: 'none',
+  },
   textfield: {
     marginTop: '40px',
     background: '#FAFAFC',
+  },
+  select: {
+    background: '#FAFAFC',
+  },
+  selectPadding: {
+    marginTop: '40px !important',
+    marginRight: '0 !important',
+    marginLeft: '0 !important',
+    marginBottom: '0 !important',
+    flexGrow: 1,
+  },
+  registerButton: {
+    fontFamily: 'Poppins',
+    fontSize: 24,
+    color: 'white',
+    fontWeight: 600,
+    height: '56px',
+    width: '197px',
+    background: '#04D361',
+    '&:hover': {
+      background: '#35DD53',
+    },
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
   },
 }));
 
